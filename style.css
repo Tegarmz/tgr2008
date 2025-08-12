@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  font-family: 'Comic Neue', cursive;
+  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #ff6f61;
+}
+
+.question-box p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #e74c3c;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 3px solid #f39c12;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #27ae60;
+}
+
+button {
+  margin-top: 15px;
+  background: #ff6f61;
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255,111,97,0.5);
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e55b50;
+}
+
+.response {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2980b9;
+  min-height: 40px;
+}
+
+/* Hiasan bintang berwarna */
+.container::before {
+  content: "✨";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 3rem;
+  animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
